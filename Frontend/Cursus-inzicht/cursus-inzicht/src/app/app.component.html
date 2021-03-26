@@ -1,0 +1,19 @@
+<h1>InfoSupport cursussen inzicht</h1>
+<ul ngbNav #nav="ngbNav" class="nav-tabs">
+    <li ngbNavItem>
+        <a ngbNavLink routerLink="">Home </a>
+      </li>
+    <li ngbNavItem>
+    <a ngbNavLink routerLink="overzicht">Overzicht </a>
+    </li>
+    <li ngbNavItem>
+        <a ngbNavLink routerLink="/cursussen">cursussen</a>
+    </li>
+    <li ngbNavItem>
+        <a ngbNavLink routerLink="/upload">upload bestand</a>
+    </li>
+</ul>
+<div [ngbNavOutlet]="nav"></div>
+<div class="content">
+    <router-outlet></router-outlet>
+</div>

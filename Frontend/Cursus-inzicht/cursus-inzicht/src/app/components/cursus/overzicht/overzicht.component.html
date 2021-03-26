@@ -1,0 +1,21 @@
+<h1>cursusinstanties</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Titel</th>
+            <th>Cursuscode</th>
+            <th>Duur</th>
+            <th >startdatum</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngIf="isLoading"><td colspan="4">Cursussen worden opgehaald, een moment geduld aub</td></tr>
+        <tr *ngFor="let cursus of cursusCompleetSorted">
+            <td>{{cursus.titel}}</td>
+            <td>{{cursus.cursusCode}}</td>
+            <td>{{cursus.duur}}</td>
+            <td>{{cursus.startdatum | date: 'dd/MM/yyyy'}}</td>
+        </tr>
+    </tbody>
+</table>
